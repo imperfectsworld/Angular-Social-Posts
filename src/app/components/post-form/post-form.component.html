@@ -1,0 +1,12 @@
+<form>
+<button (click) = "toggleDisplay()">New Thought</button>
+@if(display === true)
+{
+    <p>Title</p>
+    <input placeholder="Enter a Title" name = "titlee" type = "text" [(ngModel)]="formPost.title">
+    <p>Thought</p>
+    <input placeholder="Enter a Thought" name = "thought" type = "text" [(ngModel)]="formPost.thought">
+
+    <button (click) = "emitCreated()">Submit</button>
+}
+</form>

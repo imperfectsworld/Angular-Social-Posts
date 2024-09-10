@@ -1,0 +1,8 @@
+<h2>Social Posts</h2>
+
+@for(i of AllPosts; track $index)
+{
+    <app-single-post [sPost] = "i"> </app-single-post>
+}
+
+<app-post-form (PostCreated)="OnSubmit($event)" ></app-post-form>
